@@ -3,7 +3,7 @@ body {
     min-height: 100vh;
     display: grid;
     grid-template-columns: 1fr 4fr;
-    grid-template-rows: 1fr 4fr;
+    grid-template-rows: 16vh 1fr;
     font-family: Roboto, Arial, Helvetica, sans-serif;
     box-sizing: border-box;
 }
@@ -150,4 +150,60 @@ body {
 
 .main-content {
     background-color: #FBF6EE;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+.projects {
+    grid-row: 1 / 3;
+    padding: 16px 24px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 1fr;
+    grid-auto-rows: minmax(180px, 1fr);
+    column-gap: 32px;
+}
+
+.projects > h1 {
+    grid-column: 1 / 3;
+}
+
+.card {
+    background-color: white;
+    border-radius: 8px;
+    border-left: 8px solid #FB8B24;
+    padding: 24px 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 24px;
+    box-shadow: 2px 2px 5px lightgray;
+}
+
+.text > div {
+    font-size: 13px;
+    color: grey;
+}
+
+.icon-container {
+    display: flex;
+    justify-content: flex-end;
+    gap: 16px;
+}
+
+h1,
+h2 {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    margin-bottom: 12px;
+    font-size: 18px;
+}
+
+h2 {
+    margin-bottom: 8px;
+    font-size: 15px;
 }
